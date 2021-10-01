@@ -1,0 +1,12 @@
+<h1>Deleting Book</h1>
+
+<%= form_for @book, method: 'delete' do |f| %>
+  <p>
+    <strong>Are you sure you want to delete the book <em><%= @book.title %></em>? It will <em>not</em> be recoverable.</strong>
+  </p>
+  <div class="actions">
+    <%= f.submit("Delete Book") %>
+  </div>
+<%= link_to 'Show', @book %> |
+<%= link_to 'Back', books_path %>
+<% end %>
